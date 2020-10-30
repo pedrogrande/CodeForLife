@@ -100,12 +100,39 @@ Your environment should look like this:
 
 Checking versions of packages:
 
+**rvm** is Ruby Version Manager - we use this tool to update and manage the versions of Ruby we will use
+
 ```
 $ ruby -v
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 
 $ rails -v
 Rails 5.0.0
+
+$ rvm -v
+rvm 1.29.8 (1.29.8) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+```
+
+##### Update RVM and ruby
+```
+# update to latest version of rvm:
+$ rvm get head
+
+# list the available versions of Ruby:
+$ rvm list known
+
+# install the latest stable MRI version:
+$ rvm install 2.7.2
+
+# create a gemset with rvm:
+$ rvm use ruby-2.7.2@rails5244 --create
+
+# install Rails
+$ gem install rails --version=5.2.4.4 --no-document
+
+# check your rvm gemset
+$ rvm list gemsets
+
 ```
 
 Some Linux commands:
@@ -126,11 +153,57 @@ $ cd subfolder_name
 
 ### First Rails App
 
-In your terminal, enter the following command:
+In your terminal, enter the following command. The **new** keyword is the instruction to create a new app.
+
 ```
-rails new myfirstapp
+$ rails new .
+
+# Start the Rails development server:
+$ rails server
+# or
+$ rails s
+
+# Your output should look like this:
+=> Booting Puma
+=> Rails 5.2.4.4 application starting in development
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.6 (ruby 2.7.2-p137), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://localhost:8080
+Use Ctrl-C to stop
 ```
 
+Now we want to see if it is working by Previewing the app in the browser:
 
+![](https://res.cloudinary.com/business-design-institute/image/upload/v1604053380/CleanShot_2020-10-30_at_20.22.35_2x.jpg)
 
-```gem install rails --version=5.2.4.3 --no-document```
+![](https://res.cloudinary.com/business-design-institute/image/upload/v1604053489/CleanShot_2020-10-30_at_20.24.26_2x.jpg)
+
+---
+
+##### Create your own home page
+
+Open a new terminal pane and run this command:
+
+_Generate_ a **home** controller with an **index** action
+```
+$ rails g controller home index
+```
+
+Find the **config/routes.rb** file
+Change line 2 from this:
+```
+Rails.application.routes.draw do
+  get 'home/index'
+end
+```
+To this:
+```
+Rails.application.routes.draw do
+  root 'home#index'
+end
+```
+
+Then refresh the browser tab where your app is displayed.
