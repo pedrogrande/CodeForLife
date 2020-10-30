@@ -98,9 +98,38 @@ Your environment should look like this:
 
 ---
 
+Checking versions of packages:
 
+```
+$ ruby -v
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
 
+$ rails -v
+Rails 5.0.0
+```
 
+Some Linux commands:
+```
+# Which directory am I in now? Present Working Directory
+$ pwd
+
+# List items in this directory
+$ ls -al
+
+# Change Directory
+# Go up a level:
+$ cd ..
+
+# Go into a subfolder:
+$ cd subfolder_name
+```
+
+### First Rails App
+
+In your terminal, enter the following command:
+```
+rails new myfirstapp
+```
 
 
 
