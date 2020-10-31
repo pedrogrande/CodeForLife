@@ -207,3 +207,33 @@ end
 ```
 
 Then refresh the browser tab where your app is displayed.
+
+
+
+github.com/pedrogrande
+
+rvm use ruby-2.7.2@rails --create
+
+gem install rails --version=5.2.4.4 --no-document
+
+g is short for generate
+rails g controller home index
+
+rails routes
+
+
+rails g scaffold Book title description:text price:decimal
+rails db:migrate
+
+CamelCase
+snake_case
+
+CRUD
+Create
+Read
+Update
+Delete
+
+https://www.codecademy.com/learn/learn-ruby
+https://www.codecademy.com/learn/learn-html
+https://www.codecademy.com/learn/learn-css
