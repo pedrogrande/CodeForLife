@@ -74,27 +74,17 @@ puts name
 
 ### Data Types
 
-Numbers
-
-Integers
-
-Floats (Best for non-currency non-whole numbers)
-
-Decimals (Best for currency)
-
-Characters
-
-String (Up to 255 characters)
-
-Text (up to millions of characters)
-
-Date, Time, DateTime
-
-Boolean (true, false)
-
-Array (a list of things in square brackets)
-
-Hash (key/value pairs in curly brackets)
+- Numbers
+  - Integers
+  - Floats (Best for non-currency non-whole numbers)
+  - Decimals (Best for currency)
+- Characters
+  - String (Up to 255 characters)
+  - Text (up to millions of characters)
+- Date, Time, DateTime
+- Boolean (true, false)
+- Array (a list of things in square brackets)
+- Hash (key/value pairs in curly brackets)
 
 ```
 Time.now
