@@ -34,7 +34,7 @@
    2. Install new version of Ruby `rvm install 2.7.2`
    3. Create new gemset `rvm use ruby-2.7.2@rails --create`
    4. Install new version of Rails `gem install rails --version=5.2.4.4 --no-document`
-1. Create new app: `rails new authapp`
+1. Create new app: `rails new chickenshop`
 
 
 ---
